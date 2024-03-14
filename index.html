@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 21st Birthday, Merlin!</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+  }
+
+  .card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    cursor: pointer;
+  }
+
+  .card:hover {
+    transform: rotateY(180deg);
+  }
+
+  .card-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 15px;
+  }
+
+  .card-front {
+    background: url('images/merlin.jpg') center/cover;
+  }
+
+  .card-back {
+    background-color: #f0e9e9; 
+    color: #555555; 
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+  }
+
+  .message {
+    text-align: center;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #555555; 
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  /* layar kecil */
+  @media (max-width: 768px) {
+    .container {
+      width: 250px;
+      height: 350px;
+    }
+
+    .card {
+      font-size: 12px;
+    }
+
+    .message {
+      padding: 10px;
+    }
+
+    h1 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  /* layar sangat kecil */
+  @media (max-width: 480px) {
+    .container {
+      width: 200px;
+      height: 300px;
+    }
+
+    .card {
+      font-size: 10px;
+    }
+
+    .message {
+      padding: 5px;
+    }
+
+    h1 {
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="card">
+    <div class="card-face card-front"></div>
+    <div class="card-face card-back">
+      <div class="message">
+        <h1>Happy 21st Birthday, Merlin!</h1>
+        <p>Wishing you a day filled with joy, laughter, and lots of surprises!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
